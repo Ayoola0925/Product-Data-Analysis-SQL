@@ -12,15 +12,15 @@
 
 - [SQL Queries and Analysis](sql-queries-and-analysis)
 
-  [Top-Selling Products by Quantity](top-selling-products-by-quantity)
+  [TOP-SELLING PRODUCTS BY QUANTITY](top-selling-products-by-quantity)
 
-  [Products Generating the Highest Revenue](products-generating-the-highest-revenue)
+  [PRODUCTS GENERATING HIGHEST REVENUE](products-generating-the-highest-revenue)
 
-  [Number of Unique Products Sold](number-of-unique-products-sold)
+  [NUMBER OF UNIQUE PRODUCT SOLD](number-of-unique-products-sold)
 
-  [Average Selling Price per Product Category](average-selling-price-per-product-category)
+  [AVERAGE SELLING PRICE PER PRODUCT CATEGORY](average-selling-price-per-product-category)
 
-  [Products Not Sold in the Last 6 Months](products-not-sold-in-the-last-6-months)
+  [PRODUCTS NOT SOLD IN LAST SIX MONTHS](products-not-sold-in-the-last-6-months)
 
  - [Insights and Recommendations](insights-and-recommendation)
 
