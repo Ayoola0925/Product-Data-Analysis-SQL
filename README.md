@@ -53,7 +53,7 @@ This project uses two primary tables:
 
 - Orders Table: Tracks customer orders, including order dates, product IDs, and the quantities ordered.
   
- Additional information about customer data is referenced to understand buying patterns where applicable.
+
 
 
 
@@ -66,12 +66,13 @@ The following query identifies the top 10 products with the highest total sales 
 
 sql
 
-SELECT p.product_id, p.product_name, SUM(o.quantity) AS total_quantity_sold
+SELECT p.productID, p.Name, SUM(o.quantity) AS total_quantity_sold
 FROM products p
-JOIN orders o ON p.product_id = o.product_id
-GROUP BY p.product_id, p.product_name
+JOIN orders o ON p.ProductID = o.ProductID
+GROUP BY p.ProductID, p.Name
 ORDER BY total_quantity_sold DESC
 LIMIT 10;
+
 
 ![Top selling products](https://github.com/user-attachments/assets/3c43f6a4-d18b-4bde-8fb8-ed1056bcc062)
 
@@ -122,7 +123,7 @@ The following query determines how many unique products were sold.
 
 sql
 
-SELECT COUNT(DISTINCT o.product_id) AS unique_products_in_stock
+SELECT COUNT(DISTINCT o.productID) AS unique_products_in_stock
 FROM orders o;
 
 
@@ -188,7 +189,18 @@ It helps identify slow-moving or outdated inventory that may require promotion o
 
 - Top-Selling Products
 
-Products like Bluetooth Speakers and Wireless Headphones drive significant sales volume. Ensuring these products are well-stocked can prevent lost sales due to stockouts.
+Products like:
+K-Eco Blast 400,
+K-Eco Blast 100,
+K-Eco AA  NiMH rechargeable batteries (6-pack),
+K-Eco Energy Bulbs 9W  (8-pack),
+K-Eco Energy Bulbs 9W (4-pack),
+K-Eco 575,
+K-Eco 325,
+K-Eco 300,
+K-Eco Energy Bulbs 23W,
+K-Eco 200.
+drive significant sales volume. Ensuring these products are well-stocked can prevent lost sales due to stockouts.
 
 - High-Revenue Products
 
