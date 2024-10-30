@@ -60,7 +60,7 @@ This project uses two primary tables:
 ## SQL Queries and Analysis
 
 
--  Top-Selling Products by Quantity
+-  TOP-SELLING PRODUCTS BY QUANTITY
   
 The following query identifies the top 10 products with the highest total sales quantity.
 
@@ -85,8 +85,8 @@ The SUM() function calculates the total quantity sold for each product.
 Results are sorted in descending order by the total quantity sold, and only the top 10 products are displayed.
 
 
-- Products Generating the Highest Revenue
-
+- PRODUCTS GENERATING HIGHEST REVENUE
+  
 This query identifies the products that generate the most revenue.
 
 sql
@@ -116,14 +116,15 @@ The SUM() function aggregates the revenue for each product.
 
 The LIMIT clause ensures only the top 10 highest revenue products are displayed.
 
--  Number of Unique Products Sold
--  
+-  NUMBER OF UNIQUE PRODUCT SOLD
+   
 The following query determines how many unique products were sold.
 
 sql
 
 SELECT COUNT(DISTINCT o.product_id) AS unique_products_in_stock
 FROM orders o;
+
 
 ![Count of unique product sold](https://github.com/user-attachments/assets/cd040db3-79eb-429a-b619-af001d296e4a)
 
@@ -134,8 +135,8 @@ The COUNT(DISTINCT) function counts the number of distinct product IDs in the or
 This metric helps measure product diversity in sales.
 
 
-- Average Selling Price per Product Category
-- 
+- AVERAGE SELLING PRICE PER PRODUCT CATEGORY
+  
 This query calculates the average selling price for each product category.
 
 sql
@@ -158,8 +159,8 @@ The AVG() function computes the average price of products within each category.
 Grouping by category provides insights into pricing trends across different product types.
 
 
-- Products Not Sold in the Last 6 Months
-- 
+- PRODUCTS NOT SOLD IN LAST SIX MONTHS
+  
 The following query identifies products that have not been sold in the past six months.
 
 sql
@@ -172,6 +173,7 @@ WHERE ProductID NOT IN (
     WHERE STR_TO_DATE(OrderDate, '%Y-%m-%d') >= DATE_SUB(CURDATE(), INTERVAL 6 MONTH)
 )
 LIMIT 1000;
+
 
 ![Product not sold for the past 6months](https://github.com/user-attachments/assets/8dca01aa-b497-4a4d-a840-ef33a3bb53aa)
 
